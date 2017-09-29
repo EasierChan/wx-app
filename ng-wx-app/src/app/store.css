@@ -1,0 +1,55 @@
+.ad {
+  height: 100px;
+}
+
+.date, .desc, .items {
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 5px 5px;
+}
+
+.items {
+  margin-bottom: 30px;
+}
+
+.items > .item > .food,
+.items > .item > .dish {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.food > img, .dish > img {
+  width: 80px;
+  height: 80px;
+}
+
+.food-desc {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-left: 0;
+}
+
+.food-desc > * {
+  padding: 2px 5px;
+  border-bottom: 1px solid #ccc;
+  flex: 1;
+}
+
+.food-desc > *:only-of-type(span) {
+  flex: none;
+}
+.operator {
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.operator > * {
+  flex: 1;
+}

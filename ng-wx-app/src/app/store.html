@@ -1,0 +1,36 @@
+<div class="ad">
+  <span>广告区</span>
+</div>
+<div class="date">
+  <span>星期{{weekday}}, {{today | date: 'yyyy/MM/dd'}}</span>
+</div>
+<div class="desc">
+  <span>当天19点截止下单，第二天10点前可取消</span>
+</div>
+<div class="items">
+  <span>星期{{weekday}}菜单：</span><br>
+  <div *ngFor="let dish of dishes" class="item">
+    <div *ngFor="let food of dish.foods" class="food">
+      <img src="" alt="图片">
+      <div class="food-desc">
+        <span>{{food.name}}</span>
+        <p>介绍：{{food.desc}}</p>
+      </div>
+    </div>
+    <div class="dish">
+      <img src="" alt="套餐图片">
+      <div class="food-desc">
+        <span>{{dish.name}}</span>
+        <p>简介：{{dish.desc}}</p>
+        <span>价格：{{dish.price}}元</span>
+      </div>
+      <button (click)="putintoCart(dish)">
+        加入购物车
+      </button>
+    </div>
+  </div>
+</div>
+<div class="operator">
+  <button>购物车: {{amount}}元</button>
+  <button>提交订单</button>
+</div>
